@@ -74,11 +74,11 @@
             </div>
             <ul class="list-disc pl-4">
               <li class="text-slate-400 group-hover:text-amber-500 text-lg font-normal
-                w-full whitespace-pre-wrap break-words">
+                w-full whitespace-pre-wrap break-all">
                 {chapter.meaning.en}
               </li>
               <li class="text-slate-400 group-hover:text-amber-500 text-lg font-normal
-                w-full whitespace-pre-wrap break-words">
+                w-full whitespace-pre-wrap break-all">
                 {chapter.meaning.hi}
               </li>
             </ul>

@@ -13,6 +13,9 @@ const config = {
     }
   },
   vite: {
+  },
+  ssr: {
+    noExternal: ['style-value-types', 'popmotion', 'framesync']
   }
 };
 

@@ -1,7 +1,7 @@
 <script lang='ts'>
   import type { PageData } from './$types';
   import SpxTopBar from '$components/generic/SpxTopBar.svelte';
-  import { Motion } from 'svelte-motion'
+  import Motion from 'svelte-motion/src/motion/MotionSSR.svelte';
 
   export let data: PageData;
 

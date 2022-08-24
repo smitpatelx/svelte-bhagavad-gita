@@ -1,4 +1,5 @@
 import type { DataObject, KeyValuePair } from "$interfaces/chapters";
+import config from "$src/config/variables";
 
 export type DataType = {
   _id: string,
@@ -33,7 +34,7 @@ export async function load({ params }: {
   }
 }): Promise<DataType> {
   const data: DataObject = await fetch(
-    `https://bhagavadgitaapi.in/slok/${params.chapter}/${params.verse}/`
+    `${config.apiBasePath}/slok/${params.chapter}/${params.verse}/`
   ).then(res => res.json());
   return {
     ...data,

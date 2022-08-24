@@ -24,27 +24,28 @@
       </div>
     </SpxTopBar>
 
-    <div class="flex flex-col gap-y-1 bg-slate-900 rounded-md py-6 px-2">
-      <div class="w-full text-slate-200 text-xl
-        rounded-md py-2 px-4 flex gap-x-4">
+    <div class="flex flex-col gap-y-1 bg-slate-900 rounded-md py-6 px-2
+      text-lg md:text-xl">
+      <div class="w-full text-slate-200 rounded-md py-2 px-4 
+        flex flex-col md:flex-row md:gap-x-4 gap-y-2 md:gap-y-0">
         <span class="font-bold text-amber-600">Name :</span>
         <span>{data.name}</span>
       </div>
       
-      <div class="w-full text-slate-200 text-xl
-        rounded-md py-2 px-4 flex gap-x-4">
+      <div class="w-full text-slate-200 rounded-md py-2 px-4 
+        flex flex-col md:flex-row md:gap-x-4 gap-y-2 md:gap-y-0">
         <span class="font-bold text-amber-600">Total Verse :</span>
         <span>{data.verses_count}</span>
       </div>
       
-      <div class="w-full text-slate-200 text-xl
-        rounded-md py-2 px-4 flex gap-x-4">
+      <div class="w-full text-slate-200 rounded-md py-2 px-4 
+        flex flex-col md:flex-row md:gap-x-4 gap-y-2 md:gap-y-0">
         <span class="font-bold text-amber-600">Transliteration :</span>
         <span class="whitespace-pre-wrap break-words">{data.transliteration}</span>
       </div>
       
-      <div class="w-full text-slate-200 text-xl
-        rounded-md py-2 px-4 flex gap-x-4">
+      <div class="w-full text-slate-200 rounded-md py-2 px-4 
+        flex flex-col md:flex-row md:gap-x-4 gap-y-2 md:gap-y-0">
         <span class="font-bold text-amber-600">Translation :</span>
         <span class="whitespace-pre-wrap break-words">{data.translation}</span>
       </div>

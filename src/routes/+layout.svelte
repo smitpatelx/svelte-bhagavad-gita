@@ -3,6 +3,9 @@
   import "../styles/global.scss";
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/ico" href="/favicon.ico" />
+</svelte:head>
 <div class="w-full h-full max-w-full-xl max-h-full relative
   flex flex-col">
   <div class="z-10 backdrop-blur-sm backdrop-brightness-50 min-h-screen min-w-full text-slate-100">

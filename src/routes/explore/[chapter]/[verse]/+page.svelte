@@ -12,8 +12,8 @@
 <svelte:head>
   <title>GITA - CH: {chapter} / VERSE {verse}</title>
 </svelte:head>
-<div class="w-full h-full min-h-screen block container mx-auto">
-  <div class="bg-slate-800/60 w-full h-full p-4 gap-y-4 flex flex-col min-h-screen">
+<div class="w-full h-full min-h-fill block container mx-auto">
+  <div class="bg-slate-800/60 w-full h-full p-4 gap-y-4 flex flex-col min-h-fill">
     <SpxTopBar>
       <div class="flex flex-wrap gap-x-6 bg-gradient-to-br from-red-500 via-amber-500 to-amber-600
       bg-clip-text text-transparent text-lg">

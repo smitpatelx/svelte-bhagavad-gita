@@ -7,6 +7,9 @@ html, body {
   .h-w-fill {
     height: -webkit-fill-available;
   }
+  .min-h-fill {
+    min-height: -webkit-fill-available;
+  }
   html {
     @apply overflow-y-auto;
     height: -webkit-fill-available;
@@ -17,6 +20,9 @@ html, body {
   /* CSS for other than iOS devices */
   .h-w-fill {
     height: 100vh;
+  }
+  .min-h-fill {
+    min-height: 100vh;
   }
   html {
     @apply overflow-y-auto;

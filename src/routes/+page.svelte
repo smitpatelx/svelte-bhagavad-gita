@@ -3,8 +3,8 @@
   import SpxLink from '$components/generic/SpxLink.svelte';
 </script>
 
-<div class='w-full container mx-auto min-h-screen'>
-  <div class='w-full flex flex-col-reverse md:flex-row h-screen justify-end'>
+<div class='w-full container mx-auto min-h-fill'>
+  <div class='w-full flex flex-col-reverse md:flex-row h-w-fill justify-end'>
     <div class='w-full md:w-1/2 md:h-full flex flex-col justify-center items-center
       flex-1 px-8 md:px-0'>
       <div class="w-full text-center md:text-left">

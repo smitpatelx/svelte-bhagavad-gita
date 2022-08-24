@@ -6,14 +6,14 @@
 <svelte:head>
   <link rel="icon" type="image/ico" href="/favicon.ico" />
 </svelte:head>
-<div class="w-full h-full max-w-full h-w-fill relative
+<div class="w-full max-w-full h-w-fill relative
   flex flex-col">
-  <div class="z-10 backdrop-blur-sm backdrop-brightness-50 min-h-screen min-w-full text-slate-100">
+  <div class="z-10 backdrop-blur-sm backdrop-brightness-50 min-h-fill min-w-full text-slate-100">
     <slot />
   </div>
   <div class="flex-1 absolute top-0 left-0 -z-10">
     <video
-      class="bg-black h-screen w-screen top-0 left-0 bottom-0 right-0 object-cover fixed"
+      class="bg-black h-w-fill w-screen top-0 left-0 bottom-0 right-0 object-cover fixed"
       controls={false}
       autoplay
       frameborder={0}

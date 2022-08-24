@@ -2,12 +2,24 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  .h-w-fill {
+    height: -webkit-fill-available;
+  }
+  html {
+    @apply overflow-y-auto;
+    height: -webkit-fill-available;
+  }
 }
 
-html {
-  height: -webkit-fill-available;
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+  .h-w-fill {
+    height: 100vh;
+  }
+  html {
+    @apply overflow-y-auto;
+    height: 100vh;
+  }
 }

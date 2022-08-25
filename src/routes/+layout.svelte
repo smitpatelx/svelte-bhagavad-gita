@@ -6,9 +6,8 @@
 <svelte:head>
   <link rel="icon" type="image/ico" href="/favicon.ico" />
 </svelte:head>
-<div class="w-full max-w-full h-w-fill relative
-  flex flex-col">
-  <div class="z-10 backdrop-blur-sm backdrop-brightness-50 min-h-fill min-w-full text-slate-100">
+<div class="w-full max-w-full min-h-fill h-full relative flex flex-col">
+  <div class="z-10 backdrop-blur-sm backdrop-brightness-50 h-full min-h-fill min-w-full text-slate-100">
     <slot />
   </div>
   <div class="flex-1 absolute top-0 left-0 -z-10">

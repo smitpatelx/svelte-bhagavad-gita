@@ -1,9 +1,13 @@
 <script>
   import { BookIcon } from 'svelte-feather-icons';
   import SpxLink from '$components/generic/SpxLink.svelte';
+  import SpxPageTransition from '$src/components/generic/SpxPageTransition.svelte';
 </script>
 
-<div class='w-full container mx-auto min-h-fill'>
+<svelte:head>
+  <title>Bhagavad Gita - The Ultimate Solution</title>
+</svelte:head>
+<SpxPageTransition>
   <div class='w-full flex flex-col-reverse md:flex-row h-w-fill justify-end'>
     <div class='w-full md:w-1/2 md:h-full flex flex-col justify-center items-center
       flex-1 px-8 md:px-0'>
@@ -32,4 +36,4 @@
       >
     </div>
   </div>
-</div>
+</SpxPageTransition>

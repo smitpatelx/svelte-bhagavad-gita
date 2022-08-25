@@ -1,7 +1,9 @@
 <script lang='ts'>
   import type { PageData } from './$types';
+  import { browser } from '$app/env'; 
   import SpxTopBar from '$components/generic/SpxTopBar.svelte';
   import Motion from 'svelte-motion/src/motion/MotionSSR.svelte';
+  import SpxPageTransition from '$src/components/generic/SpxPageTransition.svelte';
 
   export let data: PageData;
 
@@ -9,17 +11,28 @@
     visible: (i: number) => ({
       opacity: 1,
       transition: {
-        delay: i * 0.1,
+        delay: (i + 1) * 0.05,
+        ease: 'easeOut',
       },
+      y: '0rem',
+      rotateY: '0deg',
+      transformOrigin: 'center',
+      perspective: '450px',
     }),
-    hidden: { opacity: 0 },
+    hidden: (i: number) => ({
+      opacity: 0,
+      y: '5rem',
+      rotateY: '180deg',
+      transformOrigin: 'center',
+      perspective: '450px',
+    }),
   };
 </script>
 
 <svelte:head>
   <title>GITA - All Chapters</title>
 </svelte:head>
-<div class="w-full h-full block container mx-auto">
+<SpxPageTransition>
   <div class="bg-slate-800/60 w-full h-full p-4 gap-y-4 flex flex-col min-h-fill">
     <SpxTopBar>
       <div class="flex flex-wrap gap-x-6 bg-gradient-to-br from-red-500 via-amber-500 to-amber-600
@@ -34,6 +47,7 @@
       All Chapters
     </h3>
     
+    {#if browser}
     <Motion
       let:motion
       animate="visible"
@@ -87,5 +101,6 @@
       {/each}
     </div>
   </Motion>
+  {/if}
   </div>
-</div>
+</SpxPageTransition>

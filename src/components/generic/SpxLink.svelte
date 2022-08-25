@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+import { goto } from '$app/navigation';
+
   import Ripple from 'ripplet.js';
 
   // type ButtonType = 'primary' | 'secondary' | 'white' | 'gray';
@@ -18,6 +20,8 @@
 
   export let target = '_self';
 
+  export let rel = 'external' as 'alternate' | 'external';
+
   if (type === 'primary') {
     buttonClass += ` bg-orange-500 text-white`;
   } else if (type === 'secondary') {
@@ -35,6 +39,11 @@
   href={href}
   target={target}
   sveltekit:prefetch
+  rel={rel}
+  on:click={(e) => {
+    e.preventDefault();
+    goto(href);
+  }}
 >
   {label}
   <slot/>

@@ -11,20 +11,14 @@
     visible: (i: number) => ({
       opacity: 1,
       transition: {
-        delay: (i + 1) * 0.05,
+        delay: (i + 1) * 0.1,
         ease: 'easeOut',
       },
       y: '0rem',
-      rotateY: '0deg',
-      transformOrigin: 'center',
-      perspective: '450px',
     }),
     hidden: (i: number) => ({
       opacity: 0,
       y: '5rem',
-      rotateY: '180deg',
-      transformOrigin: 'center',
-      perspective: '450px',
     }),
   };
 </script>

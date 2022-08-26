@@ -6,21 +6,20 @@
 <svelte:head>
   <link rel="icon" type="image/ico" href="/favicon.ico" />
 </svelte:head>
-<div class="w-full max-w-full min-h-fill h-full relative flex flex-col">
-  <div class="z-10 backdrop-blur-sm backdrop-brightness-50 h-full min-h-fill min-w-full text-slate-100">
+<div class="w-full max-w-full min-h-fill h-full relative flex flex-col bg-gradient-app">
+  <div class="z-10 h-full min-h-fill min-w-full text-slate-100">
     <slot />
   </div>
-  <div class="flex-1 absolute top-0 left-0 -z-10">
-    <video
-      class="bg-black h-w-fill w-screen top-0 left-0 bottom-0 right-0 object-cover fixed"
-      controls={false}
-      autoplay
-      frameborder={0}
-      loop
-      muted
-    >
-      <source src="/bg-video.mp4" type="video/mp4">
-      <track kind="captions"/>
-    </video>
-  </div>
 </div>
+
+<style lang="scss">
+  .bg-gradient-app {
+    background: #2587a8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9e500c, #2587a8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9e500c, #2587a8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>

@@ -4,12 +4,13 @@
   import { goto } from '$app/navigation';
 
   const handleBackButton = () => {
-    const cutBy = $page.url.pathname.lastIndexOf('/');
-    if (cutBy === 0) {
+    const cutBy = $page.url.pathname.split('/');
+    const pathToUse: string[] = cutBy.slice(0, -2);
+    if (pathToUse.length <= 1) {
       goto('/');
       return;
     }
-    goto($page.url.pathname.substring(0, $page.url.pathname.lastIndexOf('/')));
+    goto(pathToUse.join('/'));
   }
 </script>
 

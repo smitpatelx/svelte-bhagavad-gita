@@ -4,6 +4,7 @@
   import SpxPageTransition from '$src/components/generic/SpxPageTransition.svelte';
   import { page } from '$app/stores';
   import Motion from 'svelte-motion/src/motion/MotionSSR.svelte';
+  import SpxLink from '$src/components/generic/SpxLink.svelte';
   
   const { chapter } = $page.params;
 
@@ -204,15 +205,17 @@
     >
       <div use:motion class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-4">
       {#each Array(Number(data.verses_count)) as n, i}
-        <a
+        <SpxLink
+          type=''
           href={`/explore/${chapter}/${i+1}/`}
-          class="bg-slate-900 py-8 px-4 rounded-md flex flex-col
-            focus:outline-none focus:ring focus:ring-orange-500
-            focus:bg-orange-900 focus:text-opacity-80
-            hover:bg-orange-900 hover:shadow-lg hover:shadow-orange-700/20
-            transition-all duration-300 ease-in-out group">
+          classes="bg-slate-900 py-8 px-4 rounded-md flex flex-col
+          focus:outline-none focus:ring focus:ring-orange-500
+          focus:bg-orange-900 focus:text-opacity-80
+          hover:bg-orange-900 hover:shadow-lg hover:shadow-orange-700/20
+          transition-all duration-300 ease-in-out group"
+        >
           <h3 class="w-full text-center text-4xl font-bold text-orange-500">{i+1}</h3>
-        </a>
+        </SpxLink>
       {/each}
       </div>
     </Motion>

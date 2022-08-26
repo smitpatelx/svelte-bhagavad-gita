@@ -61,7 +61,7 @@
       let:motion
     >
       <div use:motion class="w-full bg-slate-900 text-slate-200 text-xl
-        rounded-md py-2 px-4 flex flex-wrap items-center justify-between">
+        rounded-md py-2 px-4 flex flex-wrap items-center justify-between whitespace-pre-wrap break-all">
         {data.slok}
       </div>
     </Motion>
@@ -85,7 +85,7 @@
       let:motion
     >
       <div use:motion class="w-full bg-slate-900 text-slate-200 text-xl
-        rounded-md py-2 px-4 flex flex-wrap items-center justify-between">
+        rounded-md py-2 px-4 flex flex-wrap items-center justify-between whitespace-pre-wrap break-all">
         {data.transliteration}
       </div>
     </Motion>

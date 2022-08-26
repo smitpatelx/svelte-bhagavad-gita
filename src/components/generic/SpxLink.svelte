@@ -12,15 +12,15 @@ import { goto } from '$app/navigation';
     focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-yellow-800
     transition-all duration-400 ease-in-out`;
   
-  export let label = 'Button';
-
+  export let label = '';
   export let type = 'primary';
-
   export let href = '';
-
   export let target = '_self';
-
   export let rel = 'external' as 'alternate' | 'external';
+  export let classes = '';
+  export let motion = () => {};
+
+  buttonClass += " " + classes;
 
   if (type === 'primary') {
     buttonClass += ` bg-orange-500 text-white`;
@@ -30,6 +30,8 @@ import { goto } from '$app/navigation';
     buttonClass += ` bg-slate-100 text-slate-900`;
   } else if (type === 'gray') {
     buttonClass += ` bg-slate-500 text-slate-100`;
+  } else if (type === '') {
+    buttonClass = classes;
   }
 </script>
 
@@ -44,7 +46,9 @@ import { goto } from '$app/navigation';
     e.preventDefault();
     goto(href);
   }}
+  use:motion
 >
-  {label}
-  <slot/>
+{label}
+<slot/>
 </a>
+<!-- {...$$restProps} -->

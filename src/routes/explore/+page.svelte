@@ -4,6 +4,7 @@
   import SpxTopBar from '$components/generic/SpxTopBar.svelte';
   import Motion from 'svelte-motion/src/motion/MotionSSR.svelte';
   import SpxPageTransition from '$src/components/generic/SpxPageTransition.svelte';
+  import SpxLink from '$src/components/generic/SpxLink.svelte';
 
   export let data: PageData;
 
@@ -61,36 +62,37 @@
           custom={index + 1}
           let:motion
         >
-          <a
-            class="bg-slate-900 py-8 px-4 rounded-md
-              flex flex-col gap-y-2
+          <SpxLink
+            type=''
+            href={`/explore/${chapter.chapter_number}/`}
+            classes="bg-slate-900 rounded-md
               focus:outline-none focus:ring focus:ring-orange-500
               focus:bg-orange-900 focus:text-opacity-80
               hover:bg-orange-900 hover:shadow-lg hover:shadow-orange-700/20
               transition-all duration-300 ease-in-out group"
-            href={`/explore/${chapter.chapter_number}/`}
-            sveltekit:prefetch
-            use:motion
+            motion={motion}
           >
-            <div class="w-full flex flex-wrap items-center justify-between">
-              <h4 class="text-2xl font-semibold text-slate-100">
-                {chapter.name}
-              </h4>
-              <span class="text-2xl font-normal text-orange-600 group-hover:text-orange-200 pr-2">
-                {chapter.chapter_number}
-              </span>
+            <div class="flex flex-col gap-y-2 py-8 px-4">
+              <div class="w-full flex flex-wrap items-center justify-between">
+                <h4 class="text-2xl font-semibold text-slate-100">
+                  {chapter.name}
+                </h4>
+                <span class="text-2xl font-normal text-orange-600 group-hover:text-orange-200 pr-2">
+                  {chapter.chapter_number}
+                </span>
+              </div>
+              <ul class="list-disc pl-4 w-full">
+                <li class="text-slate-400 group-hover:text-amber-500 text-lg font-normal
+                  w-full whitespace-pre-wrap break-all">
+                  {chapter.meaning.en}
+                </li>
+                <li class="text-slate-400 group-hover:text-amber-500 text-lg font-normal
+                  w-full whitespace-pre-wrap break-all">
+                  {chapter.meaning.hi}
+                </li>
+              </ul>
             </div>
-            <ul class="list-disc pl-4">
-              <li class="text-slate-400 group-hover:text-amber-500 text-lg font-normal
-                w-full whitespace-pre-wrap break-all">
-                {chapter.meaning.en}
-              </li>
-              <li class="text-slate-400 group-hover:text-amber-500 text-lg font-normal
-                w-full whitespace-pre-wrap break-all">
-                {chapter.meaning.hi}
-              </li>
-            </ul>
-          </a>
+          </SpxLink>
         </Motion>
       {/each}
     </div>

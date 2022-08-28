@@ -125,8 +125,7 @@
 
           <ul class="mt-2 flex flex-col gap-y-1 list-disc pl-6">
             {#each translation.lines as line}  
-              <li class="w-full text-base font-normal text-slate-200
-                hover:bg-slate-100/20 rounded-md p-0.5 whitespace-pre-wrap break-all">
+              <li class="w-full text-base font-normal text-slate-200 rounded-md p-0.5 whitespace-pre-wrap break-all">
                 {line}
               </li>
             {/each}

@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang='ts' type='module'>
   import type { PageData } from './$types';
   import { browser } from '$app/env'; 
   import SpxTopBar from '$components/generic/SpxTopBar.svelte';

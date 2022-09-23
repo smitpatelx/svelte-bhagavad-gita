@@ -6,7 +6,7 @@ export type DataType = {
 };
 
 /** @type {import('./$types').PageLoad} */
-export async function load(): Promise<DataType> {
+export const load = async (): Promise<DataType> => {
   const data: DataObject[] = await fetch(
     `${config.apiBasePath}/chapters/`
   ).then(res => res.json());

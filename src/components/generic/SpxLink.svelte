@@ -1,5 +1,5 @@
 <script lang="ts">
-import { goto } from '$app/navigation';
+  import { goto } from '$app/navigation';
 
   import Ripple from 'ripplet.js';
 
@@ -42,13 +42,13 @@ import { goto } from '$app/navigation';
   target={target}
   sveltekit:prefetch
   rel={rel}
-  on:click={(e) => {
-    e.preventDefault();
-    goto(href);
-  }}
   use:motion
 >
 {label}
 <slot/>
 </a>
+<!-- on:click={(e) => {
+  e.preventDefault();
+  goto(href);
+}} -->
 <!-- {...$$restProps} -->

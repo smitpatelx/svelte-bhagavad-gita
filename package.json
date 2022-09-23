@@ -30,6 +30,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^1.0.0-next.39",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.77",
     "@sveltejs/kit": "^1.0.0-next.431",
     "@types/": "lottiefiles/svelte-lottie-player",
     "@typescript-eslint/eslint-plugin": "^5.27.0",

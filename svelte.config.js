@@ -10,7 +10,11 @@ const config = {
   }),
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+      edge: false,
+      split: false,
+      external: [],
+    }),
     prerender: {
       default: true,
     },

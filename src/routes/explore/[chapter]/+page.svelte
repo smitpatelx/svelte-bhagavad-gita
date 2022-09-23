@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang='ts' module="context">
   import type { PageData } from './$types';
   import SpxTopBar from '$components/generic/SpxTopBar.svelte';
   import SpxPageTransition from '$src/components/generic/SpxPageTransition.svelte';
@@ -43,6 +43,7 @@
       </div>
     </SpxTopBar>
 
+    {#if data}
     <Motion
       {variants}
       animate="visible"
@@ -80,6 +81,7 @@
         </div>
       </div>
     </Motion>
+    {/if}
 
     <hr class="border-amber-500/50 border-dashed"/>
 
